@@ -1494,3 +1494,303 @@ html {
         padding: 16px;
     }
 }
+
+/* =========================================================
+   FINAL MOBILE OVERRIDE — SKILLS + CONTACT
+   Matches the 375px mobile reference layout.
+   Desktop rules above remain unchanged.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- SKILLS ---------- */
+
+    #skills {
+        padding: 82px 16px 45px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 10px;
+        row-gap: 10px;
+        align-items: start;
+    }
+
+    #skills .skills-intro,
+    #skills .skills-visual,
+    #skills .skills-footer {
+        grid-column: 1 / -1;
+    }
+
+    #skills .skills-intro {
+        width: 100%;
+        margin: 0 0 8px;
+    }
+
+    #skills .skills-intro .section-label {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    #skills .skills-intro h1 {
+        font-size: 38px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+
+    #skills .skills-intro > p:last-child {
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    /* Hidden on mobile because it is not in the reference. */
+    #skills .skills-visual {
+        display: none;
+    }
+
+    /* Grid fixes the one-column problem caused by inline-block
+       whitespace + percentage widths. */
+    #skills .skill-card,
+    #skills .skill-card-pending {
+        width: auto;
+        min-width: 0;
+        min-height: 0;
+        height: 100%;
+        margin: 0;
+        padding: 14px;
+        display: block;
+        vertical-align: initial;
+        text-align: left;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    #skills .skill-card img,
+    #skills .skill-card-pending img {
+        width: 42px;
+        height: 42px;
+        margin: 0 0 10px;
+        display: block;
+        object-fit: contain;
+    }
+
+    #skills .skill-card h2,
+    #skills .skill-card-pending h2 {
+        width: auto;
+        margin: 0 0 8px;
+        display: block;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    #skills .skill-card > p:not(.percentage):not(.skill-status),
+    #skills .skill-card-pending > p:not(.percentage):not(.skill-status) {
+        min-height: 38px;
+        margin: 0 0 13px;
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    #skills .skill-progress {
+        width: 100%;
+        height: 7px;
+        margin: 0 0 7px;
+    }
+
+    #skills .skill-card .percentage,
+    #skills .skill-card-pending .percentage {
+        margin: 0 0 6px;
+        font-size: 12px;
+        line-height: 1.2;
+        text-align: right;
+    }
+
+    #skills .skill-status {
+        margin: 0;
+        font-size: 11px !important;
+        line-height: 1.2;
+    }
+
+    #skills .skill-card.pending,
+    #skills .skill-card-pending {
+        background-color: #f8fafc;
+    }
+
+    #skills .skills-footer {
+        margin: 10px 0 0;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    #contact {
+        min-height: auto;
+        padding: 82px 16px 45px;
+        text-align: left;
+    }
+
+    #contact .contact-info,
+    #contact .contact-form {
+        width: 100%;
+        margin: 0;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    #contact .contact-info {
+        padding: 0;
+    }
+
+    #contact .contact-info .section-label {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    #contact .contact-info h1 {
+        font-size: 38px;
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    #contact .contact-info > p {
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: 20px;
+    }
+
+    #contact .contact-links {
+        width: 100%;
+    }
+
+    #contact .contact-item {
+        width: 100%;
+        min-height: 0;
+        padding: 13px;
+        margin: 0 0 9px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        border-radius: 9px;
+    }
+
+    #contact .contact-item > span {
+        flex: 0 0 38px;
+        width: 38px;
+        font-size: 21px;
+        line-height: 1;
+    }
+
+    #contact .contact-item > div {
+        min-width: 0;
+        display: block;
+    }
+
+    #contact .contact-item h3 {
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+
+    #contact .contact-item a,
+    #contact .contact-item p {
+        display: block;
+        font-size: 12px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    #contact .contact-form {
+        padding: 18px;
+        margin-top: 22px;
+        border-radius: 10px;
+    }
+
+    #contact .form-heading {
+        margin-bottom: 18px;
+    }
+
+    #contact .form-heading > span {
+        width: 34px;
+        font-size: 23px;
+    }
+
+    #contact .form-heading > div {
+        width: calc(100% - 40px);
+    }
+
+    #contact .form-heading h2 {
+        font-size: 21px;
+        line-height: 1.2;
+    }
+
+    #contact .form-heading p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    #contact .form-row {
+        width: 100%;
+    }
+
+    #contact .form-row > div {
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+
+    #contact .contact-form label {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    #contact .contact-form input,
+    #contact .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 14px;
+        box-sizing: border-box;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    #contact .contact-form button {
+        width: 100%;
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    #contact .contact-thanks {
+        width: 100%;
+        margin: 28px 0 0;
+        padding: 18px 0;
+        font-size: 14px;
+        line-height: 1.45;
+    }
+}
+
+
+/* Extra-small phones: keep the two-column skill layout. */
+@media (max-width: 380px) {
+    #skills {
+        column-gap: 8px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    #skills .skill-card,
+    #skills .skill-card-pending {
+        padding: 12px;
+    }
+
+    #skills .skill-card img,
+    #skills .skill-card-pending img {
+        width: 38px;
+        height: 38px;
+    }
+
+    #skills .skill-card h2,
+    #skills .skill-card-pending h2 {
+        font-size: 15px;
+    }
+}
