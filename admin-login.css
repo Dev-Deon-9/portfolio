@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background: #050b1c;
     color: white;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .login-page {
@@ -30,6 +31,7 @@ body {
     top: -250px;
     right: -150px;
     box-shadow: 0 0 30px #168cff;
+    transition: 0.25s ease;
 }
 
 .login-page::after {
@@ -42,6 +44,32 @@ body {
     bottom: -250px;
     left: -150px;
     box-shadow: 0 0 30px #168cff;
+    transition: 0.25s ease;
+}
+
+/* THEME TOGGLE */
+
+.theme-toggle {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 14px;
+    border: 1px solid #263d61;
+    border-radius: 7px;
+    background: #08152d;
+    color: #91b8e8;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.25s ease;
+    z-index: 2;
+}
+
+.theme-toggle:hover {
+    border-color: #168cff;
+    color: #168cff;
 }
 
 .login-box {
@@ -152,10 +180,94 @@ body {
     z-index: 1;
 }
 
+
+/* =========================================
+   LIGHT MODE
+   ========================================= */
+
+[data-theme="light"] body {
+    background: #ffffff;
+    color: #182238;
+}
+
+[data-theme="light"] .login-page::before,
+[data-theme="light"] .login-page::after {
+    opacity: 0.12;
+    box-shadow: none;
+}
+
+[data-theme="light"] .theme-toggle {
+    background: #f8fafc;
+    border-color: #d9e2ec;
+    color: #3569a8;
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    border-color: #2870e8;
+    color: #2870e8;
+}
+
+[data-theme="light"] .login-box {
+    background: #ffffff;
+    border-color: #d9e2ec;
+    box-shadow: 0 8px 30px rgba(30, 70, 110, 0.08);
+}
+
+[data-theme="light"] .login-box h1 {
+    color: #182238;
+}
+
+[data-theme="light"] .login-box h1 span {
+    color: #2870e8;
+}
+
+[data-theme="light"] .subtitle {
+    color: #64748b;
+}
+
+[data-theme="light"] .input-box label {
+    color: #334155;
+}
+
+[data-theme="light"] .input-box input {
+    background: #f8fafc;
+    border-color: #d9e2ec;
+    color: #182238;
+}
+
+[data-theme="light"] .input-box input:focus {
+    border-color: #2870e8;
+    box-shadow: 0 0 10px rgba(40, 112, 232, 0.12);
+}
+
+[data-theme="light"] .input-box input::placeholder {
+    color: #94a3b8;
+}
+
+[data-theme="light"] .back-link {
+    border-top-color: #e1e8f0;
+}
+
+[data-theme="light"] .back-link a {
+    color: #3569a8;
+}
+
+[data-theme="light"] .footer {
+    color: #718096;
+}
+
+
+/* MOBILE */
+
 @media (max-width: 600px) {
 
     .login-page {
         padding: 20px;
+    }
+
+    .theme-toggle {
+        top: 20px;
+        right: 20px;
     }
 
     .login-box {

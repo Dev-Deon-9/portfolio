@@ -991,3 +991,88 @@ html {
     text-align: center;
     border-top: 1px solid #dce3eb;
 }
+
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN — HOME + ABOUT
+   Desktop styles above remain unchanged.
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .nav-bar { height: 68px; padding: 0 20px; }
+    .logo { gap: 7px; }
+    .logo span { font-size: 24px; }
+    .logo p { font-size: 18px; letter-spacing: 1px; }
+    .nav-bar nav, .connect-btn { display: none; }
+
+    /* HOME */
+    #home { min-height: auto; padding: 95px 20px 45px; text-align: center; }
+    .home-content { width: 100%; padding: 10px 5px; margin: 0; display: block; text-align: left; }
+    .greeting { font-size: 17px; margin-bottom: 12px; }
+    .home-content h1 { font-size: 46px; line-height: 1; margin: 0 0 10px; }
+    .home-content h2 { font-size: 25px; line-height: 1.25; margin-bottom: 17px; }
+    .home-description { width: 100%; font-size: 17px; line-height: 1.65; margin-bottom: 25px; }
+
+    .home-stats { width: 100%; display: flex; justify-content: space-between; margin-top: 15px; }
+    .stat { width: 33.333%; padding: 5px 8px; margin: 0; border-right: 1px solid #d9e0e8; }
+    .stat span { font-size: 20px; }
+    .stat h3 { font-size: 20px; margin: 5px 0; }
+    .stat p { font-size: 13px; line-height: 1.35; }
+
+    .home-buttons { width: 100%; margin-top: 25px; margin-bottom: 0; }
+    .primary-btn, .secondary-btn { width: 100%; margin: 0 0 12px; padding: 14px 18px; text-align: center; }
+    .secondary-btn { width: 100%; }
+
+    /* The desktop code card is intentionally removed on mobile. */
+    .code-card { display: none; }
+
+    /* ABOUT */
+    #about { min-height: auto; padding: 80px 20px 55px; text-align: center; }
+    .profile-card, .about-content { width: 100%; margin: 0; display: block; }
+    .profile-card { padding: 25px 18px; margin-bottom: 30px; }
+    .profile-image { width: 210px; height: 210px; margin-bottom: 22px; }
+    .profile-card h1 { font-size: 30px; }
+    .profile-card h2 { font-size: 18px; }
+    .quote { font-size: 16px; line-height: 1.5; margin: 22px 0; }
+    .social-links a { padding: 10px 12px; margin: 4px 2px; font-size: 13px; }
+
+    .about-content { padding: 10px 5px; text-align: left; }
+    .section-label { font-size: 15px; margin-bottom: 12px; }
+    .about-content h1 { font-size: 40px; line-height: 1.1; margin-bottom: 20px; }
+    .about-content p { font-size: 16px; line-height: 1.75; }
+
+    .about-stats { margin-top: 25px; }
+    .about-stats div { width: 100%; padding: 17px; margin: 8px 0; }
+    .about-stats span { font-size: 23px; }
+    .about-stats h3 { font-size: 24px; }
+
+    /* These are included so the About section continues naturally below it. */
+    .journey { width: 100%; padding: 28px 20px; margin: 45px auto 35px; }
+    .journey h2 { font-size: 28px; }
+    .journey-item { padding: 18px 0; }
+    .journey-item > span { width: 40px; font-size: 21px; }
+    .journey-item div { width: calc(100% - 45px); }
+    .journey-item h3 { font-size: 18px; }
+    .journey-item p { font-size: 14px; line-height: 1.6; }
+
+    .what-i-do { width: 100%; margin: 45px auto; }
+    .what-i-do h2 { font-size: 28px; }
+    .what-i-do > div:first-child p { font-size: 15px; line-height: 1.6; }
+    .service-card { width: 100%; margin: 8px 0; padding: 25px; }
+}
+
+@media (max-width: 420px) {
+    #home { padding-left: 16px; padding-right: 16px; }
+    .home-content h1 { font-size: 40px; }
+    .home-content h2 { font-size: 22px; }
+    .home-description { font-size: 16px; }
+    .stat { padding-left: 4px; padding-right: 4px; }
+    .stat span { font-size: 18px; }
+    .stat h3 { font-size: 18px; }
+    .stat p { font-size: 12px; }
+    #about { padding-left: 16px; padding-right: 16px; }
+    .profile-card { padding-left: 14px; padding-right: 14px; }
+    .profile-image { width: 185px; height: 185px; }
+    .about-content h1 { font-size: 35px; }
+    .journey { padding-left: 16px; padding-right: 16px; }
+}
+
