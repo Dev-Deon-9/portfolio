@@ -992,42 +992,73 @@ html {
     border-top: 1px solid #dce3eb;
 }
 
-/* ==========================================================
+/* =========================================================
    MOBILE RESPONSIVE DESIGN
+   Home + About + Skills + Contact
    Desktop styles above remain unchanged.
-   ========================================================== */
+   ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* ================= HOME ================= */
+    /* ---------- GLOBAL ---------- */
+    body {
+        overflow-x: hidden;
+    }
 
+    /* ---------- MOBILE NAVBAR ---------- */
+    .nav-bar {
+        height: 68px;
+        padding: 0 20px;
+    }
+
+    .logo span {
+        font-size: 24px;
+    }
+
+    .logo p {
+        font-size: 17px;
+    }
+
+    .nav-bar nav,
+    .connect-btn {
+        display: none;
+    }
+
+    .nav-bar::after {
+        content: "☰";
+        color: #00aaff;
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    /* ---------- HOME ---------- */
     #home {
         min-height: auto;
-        padding: 100px 5% 50px;
+        padding: 100px 20px 45px;
+        text-align: left;
     }
 
     .home-content {
         width: 100%;
-        padding: 15px 5px;
+        padding: 0;
         margin: 0;
         display: block;
         text-align: left;
     }
 
     .greeting {
-        font-size: 17px;
-        margin-bottom: 10px;
+        font-size: 18px;
+        margin-bottom: 12px;
     }
 
     .home-content h1 {
-        font-size: 46px;
-        line-height: 1.05;
-        margin-top: 0;
-        margin-bottom: 8px;
+        font-size: 52px;
+        line-height: 1;
+        margin-bottom: 10px;
     }
 
     .home-content h2 {
-        font-size: 24px;
+        font-size: 25px;
         line-height: 1.25;
         margin-bottom: 18px;
     }
@@ -1039,37 +1070,26 @@ html {
         margin-bottom: 25px;
     }
 
-    .home-buttons {
-        margin-bottom: 30px;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-        width: 100%;
-        margin: 0 0 12px;
-        padding: 13px 18px;
-        text-align: center;
-    }
-
     .home-stats {
-        display: flex;
         width: 100%;
         margin-top: 10px;
+        display: flex;
         justify-content: space-between;
     }
 
     .stat {
         width: 33.333%;
-        padding: 5px 8px;
-        margin-right: 0;
+        padding: 4px 8px;
+        margin: 0;
+        text-align: left;
     }
 
     .stat span {
-        font-size: 17px;
+        font-size: 19px;
     }
 
     .stat h3 {
-        font-size: 19px;
+        font-size: 20px;
     }
 
     .stat p {
@@ -1077,22 +1097,34 @@ html {
         line-height: 1.35;
     }
 
-    /* Hide the desktop code card underneath Home on mobile. */
+    .home-buttons {
+        margin-top: 25px;
+        margin-bottom: 0;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        margin: 0 0 12px;
+        padding: 14px 20px;
+        text-align: center;
+    }
+
+    /* The desktop code card is intentionally removed from mobile. */
     .code-card {
         display: none;
     }
 
-    /* ================= ABOUT ================= */
-
+    /* ---------- ABOUT ---------- */
     #about {
         min-height: auto;
-        padding: 90px 5% 60px;
+        padding: 75px 20px 55px;
     }
 
     .profile-card,
     .about-content {
         width: 100%;
-        margin: 10px 0;
+        margin: 0 0 25px;
         display: block;
     }
 
@@ -1101,17 +1133,32 @@ html {
     }
 
     .profile-image {
-        width: min(260px, 80vw);
-        height: min(260px, 80vw);
-        margin-bottom: 25px;
+        width: 220px;
+        height: 220px;
+        margin-bottom: 22px;
     }
 
     .profile-card h1 {
         font-size: 30px;
     }
 
+    .profile-card h2 {
+        font-size: 18px;
+    }
+
+    .quote {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .social-links a {
+        padding: 10px 12px;
+        margin: 4px 2px;
+        font-size: 13px;
+    }
+
     .about-content {
-        padding: 20px 5px;
+        padding: 10px 0;
         text-align: left;
     }
 
@@ -1133,6 +1180,7 @@ html {
     .about-stats div {
         width: 100%;
         margin: 8px 0;
+        padding: 16px;
     }
 
     .journey,
@@ -1142,12 +1190,7 @@ html {
 
     .journey {
         padding: 25px 18px;
-        margin: 40px auto;
-    }
-
-    .journey h2,
-    .what-i-do h2 {
-        font-size: 28px;
+        margin: 35px auto;
     }
 
     .journey-item > span {
@@ -1158,76 +1201,99 @@ html {
         width: calc(100% - 45px);
     }
 
-    .service-card {
-        width: 100%;
-        margin: 8px 0;
-        padding: 25px;
+    .what-i-do {
+        margin: 40px auto 0;
     }
 
-    /* ================= SKILLS ================= */
+    .service-card {
+        width: 100%;
+        margin: 7px 0;
+        padding: 24px;
+    }
 
+    /* ---------- SKILLS ---------- */
     #skills {
         min-height: auto;
-        padding: 95px 5% 60px;
+        padding: 100px 20px 55px;
     }
 
     .skills-intro {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+        text-align: left;
+    }
+
+    .skills-intro .section-label {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
     .skills-intro h1 {
-        font-size: 40px;
-        line-height: 1.15;
+        font-size: 42px;
+        line-height: 1.1;
+        margin-bottom: 12px;
     }
 
     .skills-intro > p:last-child {
         font-size: 16px;
-        line-height: 1.65;
+        line-height: 1.6;
     }
 
+    /* The round desktop visual is not part of the mobile reference. */
     .skills-visual {
-        width: 120px;
-        height: 120px;
-        padding: 35px 15px;
-        margin-bottom: 30px;
+        display: none;
     }
 
-    .skills-visual span {
-        font-size: 34px;
-    }
-
-    /* Two skill cards per row, like the mobile design. */
-    .skill-card {
-        width: 46%;
+    /* Two compact cards across the phone, like the reference image. */
+    .skill-card,
+    .skill-card-pending {
+        width: calc(50% - 10px);
         min-height: 0;
-        margin: 7px 1.5%;
-        padding: 20px 15px;
+        padding: 16px;
+        margin: 5px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        background-color: #ffffff;
+        border: 1px solid #dce3eb;
+        border-radius: 11px;
     }
 
-    .skill-card img {
-        width: 50px;
-        height: 50px;
+    .skill-card img,
+    .skill-card-pending img {
+        width: 48px;
+        height: 48px;
+        margin: 0 6px 12px 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .skill-card h2,
+    .skill-card-pending h2 {
+        width: calc(100% - 60px);
+        margin: 0 0 12px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        line-height: 1.15;
+    }
+
+    .skill-card > p:not(.percentage):not(.skill-status),
+    .skill-card-pending > p:not(.percentage):not(.skill-status) {
+        min-height: 42px;
         margin-bottom: 14px;
-    }
-
-    .skill-card h2 {
-        font-size: 19px;
-        line-height: 1.2;
-        margin-bottom: 9px;
-    }
-
-    .skill-card > p {
         font-size: 13px;
-        line-height: 1.5;
-        margin-bottom: 18px;
+        line-height: 1.45;
     }
 
     .skill-progress {
         height: 7px;
+        margin-bottom: 7px;
     }
 
-    .skill-card .percentage {
+    .skill-card .percentage,
+    .skill-card-pending .percentage {
         font-size: 13px;
+        margin-bottom: 7px;
     }
 
     .skill-status {
@@ -1235,16 +1301,15 @@ html {
     }
 
     .skills-footer {
-        margin-top: 30px;
+        margin-top: 25px;
         font-size: 14px;
-        line-height: 1.6;
     }
 
-    /* ================= CONTACT ================= */
-
+    /* ---------- CONTACT ---------- */
     #contact {
         min-height: auto;
-        padding: 90px 5% 45px;
+        padding: 75px 20px 45px;
+        text-align: left;
     }
 
     .contact-info,
@@ -1255,39 +1320,50 @@ html {
     }
 
     .contact-info {
-        padding: 15px 5px;
+        padding: 0;
+    }
+
+    .contact-info .section-label {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
     .contact-info h1 {
-        font-size: 40px;
-        line-height: 1.15;
+        font-size: 42px;
+        line-height: 1.1;
+        margin-bottom: 18px;
     }
 
     .contact-info > p {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.65;
+        margin-bottom: 24px;
     }
 
     .contact-item {
+        width: 100%;
         padding: 15px;
+        margin-bottom: 9px;
+        min-height: 68px;
     }
 
     .contact-item > span {
-        width: 38px;
+        width: 42px;
         font-size: 22px;
     }
 
     .contact-item h3 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .contact-item a,
     .contact-item p {
-        font-size: 14px;
+        font-size: 13px;
+        overflow-wrap: anywhere;
     }
 
     .contact-form {
-        padding: 22px 17px;
+        padding: 20px;
         margin-top: 25px;
     }
 
@@ -1300,15 +1376,19 @@ html {
         font-size: 25px;
     }
 
+    .form-heading > div {
+        width: calc(100% - 45px);
+    }
+
     .form-heading h2 {
-        font-size: 24px;
+        font-size: 23px;
     }
 
     .form-heading p {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.4;
     }
 
-    /* Stack Name/Email fields vertically on phones. */
     .form-row > div {
         width: 100%;
         margin-right: 0;
@@ -1316,8 +1396,8 @@ html {
 
     .contact-form input,
     .contact-form textarea {
-        font-size: 14px;
-        padding: 12px;
+        padding: 13px;
+        margin-bottom: 15px;
     }
 
     .contact-form button {
@@ -1326,28 +1406,91 @@ html {
 
     .contact-thanks {
         width: 100%;
-        margin-top: 35px;
-        font-size: 16px;
+        margin-top: 30px;
+        padding: 20px 0;
+        font-size: 15px;
+        line-height: 1.5;
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
 
-    /* Very narrow phones: give skill cards more room by stacking them. */
-    .skill-card {
-        width: 100%;
-        margin: 7px 0;
+    .nav-bar {
+        padding: 0 16px;
+    }
+
+    #home {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .home-content h1 {
-        font-size: 40px;
+        font-size: 47px;
     }
 
     .home-content h2 {
-        font-size: 21px;
+        font-size: 22px;
+    }
+
+    .home-description {
+        font-size: 16px;
+    }
+
+    .stat {
+        padding: 4px 5px;
+    }
+
+    .stat h3 {
+        font-size: 18px;
     }
 
     .stat p {
         font-size: 12px;
+    }
+
+    #about,
+    #skills,
+    #contact {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-content h1,
+    .skills-intro h1,
+    .contact-info h1 {
+        font-size: 38px;
+    }
+
+    .skill-card,
+    .skill-card-pending {
+        width: calc(50% - 8px);
+        padding: 13px;
+        margin: 4px;
+    }
+
+    .skill-card img,
+    .skill-card-pending img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .skill-card h2,
+    .skill-card-pending h2 {
+        width: calc(100% - 52px);
+        font-size: 16px;
+    }
+
+    .skill-card > p:not(.percentage):not(.skill-status),
+    .skill-card-pending > p:not(.percentage):not(.skill-status) {
+        font-size: 12px;
+    }
+
+    .contact-form {
+        padding: 16px;
     }
 }
