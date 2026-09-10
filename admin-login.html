@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="admin-login.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-box">
+
+            <div class="logo">
+                F
+            </div>
+
+            <h1>Admin <span>Login</span></h1>
+
+            <p class="subtitle">
+                Access your dashboard to view and manage messages.
+            </p>
+
+            <form action="/login" method="POST">
+
+                <div class="input-box">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <div class="back-link">
+                <a href="index.html">← Back to Portfolio</a>
+            </div>
+
+        </div>
+
+        <p class="footer">
+            FlavorAI &nbsp; • &nbsp; Admin Panel
+        </p>
+
+    </div>
+
+</body>
+</html>
