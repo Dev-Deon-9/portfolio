@@ -2340,3 +2340,392 @@ html {
         padding: 15px 11px 42px !important;
     }
 }
+
+
+
+/* =====================================================
+   MOBILE CHATGPT-STYLE SIDEBAR NAVIGATION
+   ===================================================== */
+
+
+/* Hide mobile navigation on desktop */
+#menu-toggle,
+.hamburger,
+.mobile-sidebar,
+.menu-overlay {
+    display: none;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ---------------------------------------------
+       Keep the normal navbar visible
+       --------------------------------------------- */
+
+    .nav-bar {
+        position: relative;
+        z-index: 1000;
+    }
+
+
+    /* Hide desktop navigation */
+    .desktop-nav,
+    .nav-bar > .connect-btn {
+        display: none;
+    }
+
+
+    /* ---------------------------------------------
+       Hamburger
+       --------------------------------------------- */
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+
+        position: fixed;
+        top: 18px;
+        left: 18px;
+
+        width: 42px;
+        height: 42px;
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        gap: 5px;
+
+        cursor: pointer;
+
+        z-index: 2002;
+
+        background: rgba(255, 255, 255, 0.92);
+
+        border: 1px solid rgba(30, 60, 100, 0.12);
+
+        border-radius: 12px;
+
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+        transition: 0.25s ease;
+    }
+
+
+    .hamburger span {
+        display: block;
+
+        width: 20px;
+        height: 2px;
+
+        background: #14213d;
+
+        border-radius: 10px;
+
+        transition: 0.3s ease;
+    }
+
+
+    /* ---------------------------------------------
+       Sidebar
+       --------------------------------------------- */
+
+    .mobile-sidebar {
+
+        display: flex;
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: min(82vw, 330px);
+        height: 100vh;
+
+        background: #ffffff;
+
+        z-index: 2001;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        box-sizing: border-box;
+
+        transform: translateX(-105%);
+
+        transition: transform 0.3s ease;
+
+        box-shadow: 10px 0 35px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* Open sidebar */
+
+    #menu-toggle:checked ~ .mobile-sidebar {
+        transform: translateX(0);
+    }
+
+
+    /* ---------------------------------------------
+       Sidebar header
+       --------------------------------------------- */
+
+    .mobile-sidebar-header {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding-bottom: 22px;
+
+        border-bottom: 1px solid #e7edf5;
+    }
+
+
+    .mobile-sidebar-header .logo {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+    }
+
+
+    .mobile-sidebar-header .logo span {
+
+        color: #2563eb;
+
+        font-weight: 700;
+    }
+
+
+    .mobile-sidebar-header .logo p {
+
+        margin: 0;
+
+        color: #14213d;
+
+        font-weight: 800;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* Close X */
+
+    .close-menu {
+
+        display: flex;
+
+        width: 40px;
+        height: 40px;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+
+        font-size: 30px;
+
+        line-height: 1;
+
+        color: #14213d;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+
+    .close-menu:hover {
+        background: #f1f5f9;
+    }
+
+
+    /* ---------------------------------------------
+       Mobile links
+       --------------------------------------------- */
+
+    .mobile-nav-links {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 6px;
+
+        margin-top: 25px;
+    }
+
+
+    .mobile-nav-links a {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 14px;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 14px 15px;
+
+        border-radius: 12px;
+
+        text-decoration: none;
+
+        color: #334155;
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        transition: 0.2s ease;
+    }
+
+
+    .mobile-nav-links a span {
+
+        width: 25px;
+
+        text-align: center;
+
+        font-size: 18px;
+    }
+
+
+    .mobile-nav-links a:hover {
+
+        background: #f1f5f9;
+
+        color: #2563eb;
+    }
+
+
+    /* ---------------------------------------------
+       Bottom connect button
+       --------------------------------------------- */
+
+    .mobile-sidebar-bottom {
+
+        margin-top: auto;
+
+        padding-top: 20px;
+
+        border-top: 1px solid #e7edf5;
+    }
+
+
+    .mobile-connect-btn {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+
+        padding: 14px;
+
+        box-sizing: border-box;
+
+        border-radius: 12px;
+
+        background: #2563eb;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-weight: 700;
+
+        transition: 0.2s ease;
+    }
+
+
+    .mobile-connect-btn:hover {
+        background: #1d4ed8;
+    }
+
+
+    .mobile-sidebar-bottom p {
+
+        text-align: center;
+
+        margin: 18px 0 0;
+
+        color: #94a3b8;
+
+        font-size: 13px;
+    }
+
+
+    /* ---------------------------------------------
+       Dark overlay
+       --------------------------------------------- */
+
+    .menu-overlay {
+
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(15, 23, 42, 0.55);
+
+        z-index: 2000;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition: 0.3s ease;
+
+        cursor: pointer;
+    }
+
+
+    #menu-toggle:checked ~ .menu-overlay {
+
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+
+    /* ---------------------------------------------
+       Hamburger animation → X
+       --------------------------------------------- */
+
+    #menu-toggle:checked + .hamburger span:nth-child(1) {
+
+        transform: translateY(7px) rotate(45deg);
+    }
+
+
+    #menu-toggle:checked + .hamburger span:nth-child(2) {
+
+        opacity: 0;
+    }
+
+
+    #menu-toggle:checked + .hamburger span:nth-child(3) {
+
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+}
