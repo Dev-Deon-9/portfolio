@@ -992,795 +992,492 @@ html {
     border-top: 1px solid #dce3eb;
 }
 
-/* =========================================================
-   MOBILE RESPONSIVE DESIGN
-   Home + About + Skills + Contact
-   Desktop styles above remain unchanged.
-   ========================================================= */
+
+/* ============================================================
+   FINAL MOBILE REFERENCE MATCH — SKILLS + CONTACT
+   ============================================================ */
 
 @media (max-width: 768px) {
 
-    /* ---------- GLOBAL ---------- */
-    body {
-        overflow-x: hidden;
-    }
+    /* ---------- MOBILE HEADER ---------- */
 
-    /* ---------- MOBILE NAVBAR ---------- */
     .nav-bar {
-        height: 68px;
-        padding: 0 20px;
+        height: 64px;
+        padding: 0 18px;
+        background: #061a36;
+        border-bottom: 1px solid #17345a;
     }
 
-    .logo span {
-        font-size: 24px;
-    }
+    .nav-bar > .logo { margin-left: 0; }
 
-    .logo p {
-        font-size: 17px;
-    }
-
-    .nav-bar nav,
-    .connect-btn {
-        display: none;
-    }
-
-    .nav-bar::after {
-        content: "☰";
+    .nav-bar > .logo span {
+        font-size: 27px;
         color: #00aaff;
-        font-size: 30px;
-        line-height: 1;
     }
 
-    /* ---------- HOME ---------- */
-    #home {
-        min-height: auto;
-        padding: 100px 20px 45px;
-        text-align: left;
-    }
-
-    .home-content {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: block;
-        text-align: left;
-    }
-
-    .greeting {
-        font-size: 18px;
-        margin-bottom: 12px;
-    }
-
-    .home-content h1 {
-        font-size: 52px;
-        line-height: 1;
-        margin-bottom: 10px;
-    }
-
-    .home-content h2 {
-        font-size: 25px;
-        line-height: 1.25;
-        margin-bottom: 18px;
-    }
-
-    .home-description {
-        width: 100%;
-        font-size: 17px;
-        line-height: 1.65;
-        margin-bottom: 25px;
-    }
-
-    .home-stats {
-        width: 100%;
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .stat {
-        width: 33.333%;
-        padding: 4px 8px;
-        margin: 0;
-        text-align: left;
-    }
-
-    .stat span {
+    .nav-bar > .logo p {
         font-size: 19px;
+        color: #ffffff;
+        letter-spacing: 1px;
     }
 
-    .stat h3 {
-        font-size: 20px;
-    }
-
-    .stat p {
-        font-size: 13px;
-        line-height: 1.35;
-    }
-
-    .home-buttons {
-        margin-top: 25px;
-        margin-bottom: 0;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-        width: 100%;
-        margin: 0 0 12px;
-        padding: 14px 20px;
-        text-align: center;
-    }
-
-    /* The desktop code card is intentionally removed from mobile. */
-    .code-card {
-        display: none;
-    }
-
-    /* ---------- ABOUT ---------- */
-    #about {
-        min-height: auto;
-        padding: 75px 20px 55px;
-    }
-
-    .profile-card,
-    .about-content {
-        width: 100%;
-        margin: 0 0 25px;
-        display: block;
-    }
-
-    .profile-card {
-        padding: 25px 18px;
-    }
-
-    .profile-image {
-        width: 220px;
-        height: 220px;
-        margin-bottom: 22px;
-    }
-
-    .profile-card h1 {
-        font-size: 30px;
-    }
-
-    .profile-card h2 {
-        font-size: 18px;
-    }
-
-    .quote {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    .social-links a {
-        padding: 10px 12px;
-        margin: 4px 2px;
-        font-size: 13px;
-    }
-
-    .about-content {
-        padding: 10px 0;
-        text-align: left;
-    }
-
-    .about-content h1 {
-        font-size: 42px;
-        line-height: 1.1;
-        margin-bottom: 20px;
-    }
-
-    .about-content p {
-        font-size: 16px;
-        line-height: 1.75;
-    }
-
-    .about-stats {
-        margin-top: 25px;
-    }
-
-    .about-stats div {
-        width: 100%;
-        margin: 8px 0;
-        padding: 16px;
-    }
-
-    .journey,
-    .what-i-do {
-        width: 100%;
-    }
-
-    .journey {
-        padding: 25px 18px;
-        margin: 35px auto;
-    }
-
-    .journey-item > span {
-        width: 40px;
-    }
-
-    .journey-item div {
-        width: calc(100% - 45px);
-    }
-
-    .what-i-do {
-        margin: 40px auto 0;
-    }
-
-    .service-card {
-        width: 100%;
-        margin: 7px 0;
-        padding: 24px;
-    }
-
-    /* ---------- SKILLS ---------- */
-    #skills {
-        min-height: auto;
-        padding: 100px 20px 55px;
-    }
-
-    .skills-intro {
-        margin-bottom: 25px;
-        text-align: left;
-    }
-
-    .skills-intro .section-label {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .skills-intro h1 {
-        font-size: 42px;
-        line-height: 1.1;
-        margin-bottom: 12px;
-    }
-
-    .skills-intro > p:last-child {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    /* The round desktop visual is not part of the mobile reference. */
-    .skills-visual {
-        display: none;
-    }
-
-    /* Two compact cards across the phone, like the reference image. */
-    .skill-card,
-    .skill-card-pending {
-        width: calc(50% - 10px);
-        min-height: 0;
-        padding: 16px;
-        margin: 5px;
-        display: inline-block;
-        vertical-align: top;
-        text-align: left;
-        background-color: #ffffff;
-        border: 1px solid #dce3eb;
-        border-radius: 11px;
-    }
-
-    .skill-card img,
-    .skill-card-pending img {
-        width: 48px;
-        height: 48px;
-        margin: 0 6px 12px 0;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .skill-card h2,
-    .skill-card-pending h2 {
-        width: calc(100% - 60px);
-        margin: 0 0 12px;
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 18px;
-        line-height: 1.15;
-    }
-
-    .skill-card > p:not(.percentage):not(.skill-status),
-    .skill-card-pending > p:not(.percentage):not(.skill-status) {
-        min-height: 42px;
-        margin-bottom: 14px;
-        font-size: 13px;
-        line-height: 1.45;
-    }
-
-    .skill-progress {
-        height: 7px;
-        margin-bottom: 7px;
-    }
-
-    .skill-card .percentage,
-    .skill-card-pending .percentage {
-        font-size: 13px;
-        margin-bottom: 7px;
-    }
-
-    .skill-status {
-        font-size: 12px !important;
-    }
-
-    .skills-footer {
-        margin-top: 25px;
-        font-size: 14px;
-    }
-
-    /* ---------- CONTACT ---------- */
-    #contact {
-        min-height: auto;
-        padding: 75px 20px 45px;
-        text-align: left;
-    }
-
-    .contact-info,
-    .contact-form {
-        width: 100%;
-        margin: 0;
-        display: block;
-    }
-
-    .contact-info {
-        padding: 0;
-    }
-
-    .contact-info .section-label {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .contact-info h1 {
-        font-size: 42px;
-        line-height: 1.1;
-        margin-bottom: 18px;
-    }
-
-    .contact-info > p {
-        font-size: 16px;
-        line-height: 1.65;
-        margin-bottom: 24px;
-    }
-
-    .contact-item {
-        width: 100%;
-        padding: 15px;
-        margin-bottom: 9px;
-        min-height: 68px;
-    }
-
-    .contact-item > span {
-        width: 42px;
-        font-size: 22px;
-    }
-
-    .contact-item h3 {
-        font-size: 16px;
-    }
-
-    .contact-item a,
-    .contact-item p {
-        font-size: 13px;
-        overflow-wrap: anywhere;
-    }
-
-    .contact-form {
-        padding: 20px;
-        margin-top: 25px;
-    }
-
-    .form-heading {
-        margin-bottom: 22px;
-    }
-
-    .form-heading > span {
-        width: 38px;
-        font-size: 25px;
-    }
-
-    .form-heading > div {
-        width: calc(100% - 45px);
-    }
-
-    .form-heading h2 {
-        font-size: 23px;
-    }
-
-    .form-heading p {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .form-row > div {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        padding: 13px;
-        margin-bottom: 15px;
-    }
-
-    .contact-form button {
-        padding: 14px;
-    }
-
-    .contact-thanks {
-        width: 100%;
-        margin-top: 30px;
-        padding: 20px 0;
-        font-size: 15px;
-        line-height: 1.5;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .nav-bar {
-        padding: 0 16px;
-    }
-
-    #home {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .home-content h1 {
-        font-size: 47px;
-    }
-
-    .home-content h2 {
-        font-size: 22px;
-    }
-
-    .home-description {
-        font-size: 16px;
-    }
-
-    .stat {
-        padding: 4px 5px;
-    }
-
-    .stat h3 {
-        font-size: 18px;
-    }
-
-    .stat p {
-        font-size: 12px;
-    }
-
-    #about,
-    #skills,
-    #contact {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .profile-image {
-        width: 200px;
-        height: 200px;
-    }
-
-    .about-content h1,
-    .skills-intro h1,
-    .contact-info h1 {
-        font-size: 38px;
-    }
-
-    .skill-card,
-    .skill-card-pending {
-        width: calc(50% - 8px);
-        padding: 13px;
-        margin: 4px;
-    }
-
-    .skill-card img,
-    .skill-card-pending img {
+    .hamburger {
+        top: 11px;
+        right: 16px;
+        left: auto;
         width: 42px;
         height: 42px;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        border-radius: 8px;
     }
 
-    .skill-card h2,
-    .skill-card-pending h2 {
-        width: calc(100% - 52px);
-        font-size: 16px;
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #00aaff;
     }
 
-    .skill-card > p:not(.percentage):not(.skill-status),
-    .skill-card-pending > p:not(.percentage):not(.skill-status) {
-        font-size: 12px;
-    }
-
-    .contact-form {
-        padding: 16px;
-    }
-}
-
-/* =========================================================
-   FINAL MOBILE OVERRIDE — SKILLS + CONTACT
-   Matches the 375px mobile reference layout.
-   Desktop rules above remain unchanged.
-   ========================================================= */
-
-@media (max-width: 768px) {
 
     /* ---------- SKILLS ---------- */
 
     #skills {
-        padding: 82px 16px 45px;
-        text-align: center;
+        padding: 86px 16px 48px;
+        margin: 0;
+        min-height: auto;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 10px;
-        row-gap: 10px;
-        align-items: start;
-    }
-
-    #skills .skills-intro,
-    #skills .skills-visual,
-    #skills .skills-footer {
-        grid-column: 1 / -1;
+        gap: 12px;
+        align-items: stretch;
+        background: #f8fbff;
+        text-align: left;
     }
 
     #skills .skills-intro {
+        grid-column: 1 / -1;
         width: 100%;
-        margin: 0 0 8px;
+        margin: 0 0 10px;
+        padding: 0;
+        text-align: left;
     }
 
     #skills .skills-intro .section-label {
+        margin: 0 0 8px;
         font-size: 13px;
-        margin-bottom: 8px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        color: #1264e8;
     }
 
     #skills .skills-intro h1 {
+        margin: 0 0 12px;
         font-size: 38px;
-        line-height: 1.1;
-        margin-bottom: 10px;
+        line-height: 1.08;
+        font-weight: 800;
+        color: #10234a;
+    }
+
+    #skills .skills-intro h1 span {
+        color: #1264e8;
     }
 
     #skills .skills-intro > p:last-child {
-        font-size: 15px;
-        line-height: 1.5;
+        max-width: 100%;
         margin: 0;
+        font-size: 15px;
+        line-height: 1.55;
+        color: #58709a;
     }
 
-    /* Hidden on mobile because it is not in the reference. */
     #skills .skills-visual {
         display: none;
     }
 
-    /* Grid fixes the one-column problem caused by inline-block
-       whitespace + percentage widths. */
     #skills .skill-card,
     #skills .skill-card-pending {
-        width: auto;
+        width: auto !important;
         min-width: 0;
         min-height: 0;
-        height: 100%;
-        margin: 0;
-        padding: 14px;
-        display: block;
-        vertical-align: initial;
-        text-align: left;
+        height: 112px;
+        margin: 0 !important;
+        padding: 14px 13px 12px;
+        display: grid !important;
+        grid-template-columns: 50px minmax(0, 1fr);
+        grid-template-rows: auto auto 7px;
+        column-gap: 9px;
+        row-gap: 2px;
         box-sizing: border-box;
+        overflow: hidden;
+        background: #ffffff;
+        border: 1px solid #d7e6f7;
         border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(31, 72, 125, 0.03);
+        text-align: left;
     }
 
     #skills .skill-card img,
     #skills .skill-card-pending img {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        align-self: center;
         width: 42px;
         height: 42px;
-        margin: 0 0 10px;
+        margin: 0;
         display: block;
         object-fit: contain;
     }
 
     #skills .skill-card h2,
     #skills .skill-card-pending h2 {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: end;
         width: auto;
-        margin: 0 0 8px;
-        display: block;
-        font-size: 16px;
-        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 1.15;
+        font-weight: 700;
+        color: #10234a;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     #skills .skill-card > p:not(.percentage):not(.skill-status),
     #skills .skill-card-pending > p:not(.percentage):not(.skill-status) {
-        min-height: 38px;
-        margin: 0 0 13px;
-        font-size: 12px;
-        line-height: 1.45;
-    }
-
-    #skills .skill-progress {
-        width: 100%;
-        height: 7px;
-        margin: 0 0 7px;
+        display: none !important;
     }
 
     #skills .skill-card .percentage,
     #skills .skill-card-pending .percentage {
-        margin: 0 0 6px;
-        font-size: 12px;
-        line-height: 1.2;
-        text-align: right;
+        grid-column: 2;
+        grid-row: 2;
+        align-self: start;
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        line-height: 1.15;
+        color: #31578f;
+        text-align: left;
+    }
+
+    #skills .skill-progress {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        width: 100%;
+        height: 7px;
+        margin: 0;
+        align-self: end;
+        background: #e4eef9;
+        border-radius: 999px;
+        overflow: hidden;
+    }
+
+    #skills .skill-progress span {
+        display: block;
+        height: 100%;
+        border-radius: 999px;
+        background: #1478f5;
     }
 
     #skills .skill-status {
-        margin: 0;
-        font-size: 11px !important;
-        line-height: 1.2;
+        display: none !important;
     }
 
     #skills .skill-card.pending,
     #skills .skill-card-pending {
-        background-color: #f8fafc;
+        background: #ffffff;
     }
 
     #skills .skills-footer {
-        margin: 10px 0 0;
+        grid-column: 1 / -1;
+        width: 100%;
+        margin: 16px 0 0;
+        padding: 17px 16px;
+        box-sizing: border-box;
+        border: 1px solid #d7e6f7;
+        border-radius: 10px;
+        background: #edf6ff;
+        color: #4e6c99;
         font-size: 13px;
-        line-height: 1.4;
+        line-height: 1.5;
+        text-align: left;
     }
 
 
     /* ---------- CONTACT ---------- */
 
     #contact {
+        padding: 86px 16px 45px;
+        margin: 0;
         min-height: auto;
-        padding: 82px 16px 45px;
+        background: #ffffff;
         text-align: left;
     }
 
-    #contact .contact-info,
-    #contact .contact-form {
+    #contact .contact-info {
         width: 100%;
         margin: 0;
+        padding: 0;
         display: block;
         box-sizing: border-box;
-    }
-
-    #contact .contact-info {
-        padding: 0;
+        text-align: left;
     }
 
     #contact .contact-info .section-label {
+        margin: 0 0 8px;
         font-size: 13px;
-        margin-bottom: 8px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        color: #1264e8;
     }
 
     #contact .contact-info h1 {
+        margin: 0 0 12px;
         font-size: 38px;
-        line-height: 1.1;
-        margin-bottom: 12px;
+        line-height: 1.08;
+        font-weight: 800;
+        color: #10234a;
+    }
+
+    #contact .contact-info h1 span {
+        color: #1264e8;
     }
 
     #contact .contact-info > p {
+        margin: 0 0 21px;
         font-size: 15px;
         line-height: 1.55;
-        margin-bottom: 20px;
+        color: #58709a;
     }
 
     #contact .contact-links {
         width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
     }
 
     #contact .contact-item {
         width: 100%;
-        min-height: 0;
-        padding: 13px;
-        margin: 0 0 9px;
+        min-height: 63px;
+        margin: 0 !important;
+        padding: 10px 13px;
         display: flex;
         align-items: center;
         box-sizing: border-box;
-        border-radius: 9px;
+        background: #fafdff;
+        border: 1px solid #d7e6f7;
+        border-radius: 10px;
+        box-shadow: none;
     }
 
     #contact .contact-item > span {
-        flex: 0 0 38px;
-        width: 38px;
+        flex: 0 0 39px;
+        width: 39px;
+        margin: 0 9px 0 0;
         font-size: 21px;
         line-height: 1;
+        color: #1264e8;
+        text-align: center;
     }
 
     #contact .contact-item > div {
         min-width: 0;
-        display: block;
+        flex: 1;
     }
 
     #contact .contact-item h3 {
-        font-size: 15px;
-        margin-bottom: 3px;
+        margin: 0 0 3px;
+        font-size: 14px;
+        line-height: 1.15;
+        font-weight: 600;
+        color: #17498c;
     }
 
     #contact .contact-item a,
     #contact .contact-item p {
         display: block;
+        max-width: 100%;
+        margin: 0;
         font-size: 12px;
         line-height: 1.35;
+        color: #31578f;
+        text-decoration: none;
         overflow-wrap: anywhere;
     }
 
+
+    /* ---------- MESSAGE FORM ---------- */
+
     #contact .contact-form {
-        padding: 18px;
-        margin-top: 22px;
+        width: 100%;
+        margin: 19px 0 0;
+        padding: 16px 13px 13px;
+        display: block;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 1px solid #d7e6f7;
         border-radius: 10px;
+        box-shadow: none;
+        text-align: left;
     }
 
     #contact .form-heading {
-        margin-bottom: 18px;
+        width: 100%;
+        margin: 0 0 14px;
+        display: flex;
+        align-items: center;
     }
 
     #contact .form-heading > span {
-        width: 34px;
-        font-size: 23px;
+        flex: 0 0 31px;
+        width: 31px;
+        margin: 0 7px 0 0;
+        font-size: 21px;
+        line-height: 1;
+        color: #1264e8;
     }
 
     #contact .form-heading > div {
-        width: calc(100% - 40px);
+        min-width: 0;
+        flex: 1;
     }
 
     #contact .form-heading h2 {
-        font-size: 21px;
+        margin: 0;
+        font-size: 19px;
         line-height: 1.2;
+        font-weight: 800;
+        color: #10234a;
     }
 
     #contact .form-heading p {
-        font-size: 13px;
-        line-height: 1.4;
+        display: none;
+    }
+
+    #contact .contact-form form {
+        width: 100%;
+        margin: 0;
     }
 
     #contact .form-row {
         width: 100%;
+        display: block;
     }
 
-    #contact .form-row > div {
+    #contact .form-row > div,
+    #contact .contact-form form > div {
         width: 100%;
         margin: 0;
         display: block;
     }
 
     #contact .contact-form label {
-        font-size: 12px;
-        margin-bottom: 6px;
+        display: block;
+        margin: 0 0 5px;
+        font-size: 11px;
+        line-height: 1.2;
+        color: #31578f;
     }
 
     #contact .contact-form input,
     #contact .contact-form textarea {
         width: 100%;
-        padding: 12px;
-        margin-bottom: 14px;
+        min-width: 0;
         box-sizing: border-box;
-        font-size: 13px;
-        border-radius: 6px;
+        margin: 0 0 11px;
+        padding: 10px 11px;
+        font-family: inherit;
+        font-size: 12px;
+        line-height: 1.35;
+        color: #18345e;
+        background: #ffffff;
+        border: 1px solid #cfe1f5;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    #contact .contact-form input {
+        height: 45px;
+    }
+
+    #contact .contact-form textarea {
+        min-height: 90px;
+        height: 90px;
+        resize: vertical;
+    }
+
+    #contact .contact-form input::placeholder,
+    #contact .contact-form textarea::placeholder {
+        color: #7890b3;
+        opacity: 1;
+    }
+
+    #contact .contact-form input:focus,
+    #contact .contact-form textarea:focus {
+        border-color: #1264e8;
+        box-shadow: 0 0 0 2px rgba(18, 100, 232, 0.08);
     }
 
     #contact .contact-form button {
         width: 100%;
-        padding: 13px;
-        font-size: 14px;
+        min-height: 43px;
+        margin: 0;
+        padding: 10px 12px;
+        box-sizing: border-box;
+        font-family: inherit;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #ffffff;
+        background: #1478f5;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #contact .contact-form button:hover {
+        background: #1268db;
     }
 
     #contact .contact-thanks {
         width: 100%;
-        margin: 28px 0 0;
-        padding: 18px 0;
-        font-size: 14px;
+        margin: 20px 0 0;
+        padding: 14px 0 0;
+        font-size: 12px;
         line-height: 1.45;
+        color: #6c82a2;
+        text-align: center;
+        border-top: 1px solid #d7e6f7;
     }
 }
 
 
-/* Extra-small phones: keep the two-column skill layout. */
-@media (max-width: 380px) {
-    #skills {
-        column-gap: 8px;
+/* ---------- VERY SMALL PHONES ---------- */
+
+@media (max-width: 420px) {
+
+    #skills,
+    #contact {
         padding-left: 14px;
         padding-right: 14px;
     }
 
+    #skills .skills-intro h1,
+    #contact .contact-info h1 {
+        font-size: 35px;
+    }
+
     #skills .skill-card,
     #skills .skill-card-pending {
-        padding: 12px;
+        height: 108px;
+        padding: 13px 11px 11px;
+        grid-template-columns: 45px minmax(0, 1fr);
+        column-gap: 7px;
     }
 
     #skills .skill-card img,
@@ -1791,941 +1488,858 @@ html {
 
     #skills .skill-card h2,
     #skills .skill-card-pending h2 {
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    #skills .skill-card .percentage,
+    #skills .skill-card-pending .percentage {
+        font-size: 12px;
+    }
+
+    #contact .contact-form {
+        padding: 15px 11px 12px;
     }
 }
 
-/* =========================================================
-   MOBILE JOURNEY + WHAT I DO
-   Desktop styles above are left unchanged.
-   ========================================================= */
+
+
+
+
+/* ============================================================
+   MOBILE REFERENCE MATCH — HOME + ABOUT
+   Desktop CSS above is untouched.
+   Existing HTML/content is kept.
+   Journey and What I Do are NOT removed.
+   These rules only affect screens 768px and below.
+   ============================================================ */
 
 @media (max-width: 768px) {
 
-    /* ---------- MY JOURNEY ---------- */
+    /* ================= MOBILE HOME ================= */
 
-    .journey {
+    #home {
+        min-height: auto;
+        padding: 88px 16px 45px;
+        background-color: #f5f8fc;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    #home .home-content {
         width: 100%;
-        padding: 22px 16px;
-        margin: 30px auto 35px;
-        box-sizing: border-box;
-        border-radius: 12px;
-    }
-
-    .journey h2 {
-        font-size: 25px;
-        line-height: 1.2;
-        margin-bottom: 12px;
-    }
-
-    .journey-item {
-        position: relative;
-        min-height: 0;
-        padding: 17px 0 17px 0;
+        padding: 0;
         margin: 0;
-        display: flex;
-        align-items: flex-start;
-        gap: 13px;
-        box-sizing: border-box;
+        display: block;
+        text-align: left;
     }
 
-    /* Blue vertical timeline line */
-    .journey-item:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        left: 17px;
-        top: 50px;
-        bottom: -1px;
-        width: 1px;
-        background-color: #dce3eb;
+    #home .greeting {
+        margin: 0 0 8px;
+        font-size: 19px;
+        line-height: 1.25;
+        color: #2563eb;
     }
 
-    .journey-item > span {
-        position: relative;
-        z-index: 1;
-        flex: 0 0 34px;
-        width: 34px;
-        height: 34px;
-        padding: 5px;
+    #home .home-content h1 {
+        margin: 0 0 4px;
+        font-size: 58px;
+        line-height: .98;
+        letter-spacing: -1px;
+        color: #172033;
+    }
+
+    #home .home-content h2 {
+        margin: 0 0 18px;
+        font-size: 27px;
+        line-height: 1.15;
+        font-weight: 700;
+        color: #172033;
+    }
+
+    #home .home-description {
+        width: 100%;
+        margin: 0 0 25px;
+        font-size: 16px;
+        line-height: 1.65;
+        color: #64748b;
+    }
+
+    #home .home-stats {
+        width: 100%;
+        margin: 0 0 24px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0;
+    }
+
+    #home .stat {
+        width: auto;
+        min-width: 0;
+        padding: 4px 9px;
         margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        background-color: #ffffff;
-        border: 1px solid #dce3eb;
-        border-radius: 50%;
-        font-size: 17px;
+        display: block;
+        border-right: 1px solid #cbdcf0;
+        text-align: left;
+    }
+
+    #home .stat:first-child {
+        padding-left: 0;
+    }
+
+    #home .stat:last-child {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    #home .stat span {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 23px;
         line-height: 1;
         color: #2563eb;
     }
 
-    .journey-item div {
-        width: auto;
-        flex: 1;
-        min-width: 0;
-        display: block;
-    }
-
-    .journey-item p {
-        font-size: 12px;
-        line-height: 1.45;
+    #home .stat h3 {
         margin: 0 0 4px;
-    }
-
-    .journey-item h3 {
-        font-size: 16px;
-        line-height: 1.3;
-        margin: 0 0 5px;
-    }
-
-    .journey-item div > p:last-child {
-        margin: 0;
-        font-size: 13px;
-        line-height: 1.5;
-    }
-
-
-    /* ---------- WHAT I DO ---------- */
-
-    .what-i-do {
-        width: 100%;
-        margin: 35px auto 15px;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    .what-i-do > div:first-child {
-        margin-bottom: 20px;
-    }
-
-    .what-i-do h2 {
-        font-size: 28px;
-        line-height: 1.2;
-        margin-bottom: 9px;
-    }
-
-    .what-i-do > div:first-child p {
-        padding: 0 8px;
-        font-size: 14px;
-        line-height: 1.55;
-    }
-
-    /* Two compact columns on normal phones */
-    .what-i-do .service-card {
-        width: calc(50% - 8px);
-        min-height: 175px;
-        padding: 18px 14px;
-        margin: 4px;
-        display: inline-block;
-        vertical-align: top;
-        box-sizing: border-box;
-        text-align: left;
-        border-radius: 10px;
-    }
-
-    .what-i-do .service-card > span {
-        font-size: 23px;
+        font-size: 27px;
         line-height: 1;
+        color: #172033;
     }
 
-    .what-i-do .service-card h3 {
-        font-size: 15px;
-        line-height: 1.3;
-        margin: 11px 0 7px;
-    }
-
-    .what-i-do .service-card p {
+    #home .stat p {
+        margin: 0;
         font-size: 12px;
-        line-height: 1.5;
-    }
-}
-
-
-/* ---------- VERY SMALL PHONES ---------- */
-
-@media (max-width: 380px) {
-
-    .journey {
-        padding-left: 13px;
-        padding-right: 13px;
+        line-height: 1.35;
+        color: #64748b;
     }
 
-    .journey-item {
+    #home .home-buttons {
+        width: 100%;
+        margin: 0 0 25px;
+        display: flex;
+        flex-direction: column;
         gap: 10px;
     }
 
-    .journey-item > span {
-        flex-basis: 32px;
-        width: 32px;
-        height: 32px;
-        font-size: 15px;
-    }
-
-    .journey-item:not(:last-child)::after {
-        left: 15.5px;
-        top: 48px;
-    }
-
-    .journey-item h3 {
-        font-size: 15px;
-    }
-
-    .journey-item div > p:last-child {
-        font-size: 12px;
-    }
-
-    .what-i-do .service-card {
-        width: calc(50% - 6px);
-        min-height: 170px;
-        padding: 16px 12px;
-        margin: 3px;
-    }
-
-    .what-i-do .service-card h3 {
-        font-size: 14px;
-    }
-
-    .what-i-do .service-card p {
-        font-size: 11px;
-    }
-}
-
-/* =========================================================
-   MOBILE JOURNEY + WHAT I DO — REFERENCE MATCH
-   Based on the supplied mobile reference.
-   Desktop rules remain unchanged.
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    /* ================= MY JOURNEY ================= */
-
-    .journey {
+    #home .primary-btn,
+    #home .secondary-btn {
         width: 100%;
-        margin: 28px 0 34px;
-        padding: 0 0 6px;
-        border: 0;
-        border-radius: 0;
-        background: transparent;
-        box-sizing: border-box;
-    }
-
-    .journey h2 {
-        margin: 0 0 18px;
-        padding: 0 2px;
-        font-size: 29px;
-        line-height: 1.15;
-        text-align: left;
-        color: #172033;
-    }
-
-    .journey-item {
-        position: relative;
-        width: 100%;
-        min-height: 126px;
+        min-height: 54px;
         margin: 0;
-        padding: 0 0 15px;
-        display: grid;
-        grid-template-columns: 52px minmax(0, 1fr);
-        column-gap: 10px;
-        border: 0;
-        box-sizing: border-box;
-    }
-
-    /* Continuous vertical blue timeline. */
-    .journey-item:not(:last-child)::before {
-        content: "";
-        position: absolute;
-        left: 25px;
-        top: 52px;
-        bottom: 0;
-        width: 2px;
-        background: #2563eb;
-    }
-
-    .journey-item > span {
-        position: relative;
-        z-index: 2;
-        width: 52px;
-        height: 52px;
-        padding: 0;
-        margin: 0;
+        padding: 14px 18px;
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        border: 0;
-        border-radius: 50%;
-        background: #2563eb;
-        color: #ffffff;
-        font-size: 22px;
-        line-height: 1;
+        border-radius: 8px;
+        font-size: 15px;
+        line-height: 1.2;
+        text-align: center;
     }
 
-    .journey-item div {
-        width: auto;
-        min-width: 0;
-        padding: 13px 13px 12px;
+    #home .primary-btn {
+        background-color: #2563eb;
+        color: #ffffff;
+    }
+
+    #home .secondary-btn {
+        background-color: #ffffff;
+        color: #2563eb;
+        border: 1px solid #2563eb;
+    }
+
+    /* Keep the existing code card visible, as in the reference. */
+    #home .code-card {
+        width: 100%;
+        height: 285px;
+        margin: 0;
         display: block;
         box-sizing: border-box;
-        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #ffffff;
         border: 1px solid #dce3eb;
-        border-radius: 10px;
-        box-shadow: 0 2px 7px rgba(31, 41, 55, 0.035);
+        box-shadow: 0 10px 25px rgba(31, 41, 55, 0.08);
     }
 
-    .journey-item div > p:first-child {
-        margin: 0 0 4px;
+    #home .code-header {
+        padding: 12px 14px;
+    }
+
+    #home .code-header span {
+        width: 9px;
+        height: 9px;
+    }
+
+    #home .code-content {
+        padding: 20px 17px;
+    }
+
+    #home .code-content h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    #home .code-content > p {
         font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    #home .code-skills {
+        margin-top: 17px;
+    }
+
+    #home .code-skill {
+        margin-bottom: 10px;
+    }
+
+    #home .code-skill p {
+        font-size: 10px;
+    }
+
+    #home .progress {
+        height: 5px;
+    }
+
+    #home .code-icon {
+        padding: 6px 16px;
+        font-size: 24px;
+    }
+
+
+    /* ================= MOBILE ABOUT ================= */
+
+    #about {
+        min-height: auto;
+        padding: 88px 16px 50px;
+        background-color: #ffffff;
+        text-align: left;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    /*
+     * The original HTML puts .profile-card before .about-content.
+     * This only exposes the existing profile-card pieces to the
+     * mobile grid so the visual order can follow the reference.
+     * Nothing is deleted.
+     */
+    #about .profile-card {
+        display: contents;
+    }
+
+    #about .about-content {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: block;
+        text-align: left;
+        order: 1;
+    }
+
+    #about .about-content .section-label {
+        margin: 0 0 8px;
+        font-size: 13px;
         line-height: 1.2;
-        font-weight: 600;
         color: #2563eb;
     }
 
-    .journey-item h3 {
-        margin: 0 0 6px;
-        font-size: 16px;
-        line-height: 1.3;
+    #about .about-content h1 {
+        margin: 0 0 14px;
+        font-size: 39px;
+        line-height: 1.05;
         color: #172033;
     }
 
-    .journey-item div > p:last-child {
-        margin: 0;
-        font-size: 12px;
-        line-height: 1.48;
+    #about .about-content h1 span {
+        color: #172033;
+    }
+
+    #about .about-content > p {
+        margin: 0 0 18px;
+        font-size: 15px;
+        line-height: 1.62;
         color: #64748b;
     }
 
-
-    /* ================= WHAT I DO ================= */
-
-    .what-i-do {
+    #about .profile-card > .quote {
+        order: 2;
         width: 100%;
-        margin: 30px 0 18px;
+        margin: 0 0 18px;
         padding: 0;
+        font-size: 16px;
+        line-height: 1.45;
+        font-style: italic;
+        color: #2563eb;
         text-align: left;
+    }
+
+    #about .profile-card > .social-links {
+        order: 3;
+        width: 100%;
+        margin: 0 0 20px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    #about .social-links a {
+        min-width: 0;
+        margin: 0;
+        padding: 11px 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border: 1px solid #b9d5f5;
+        border-radius: 8px;
+        color: #2563eb;
+        background-color: #ffffff;
+        font-size: 12px;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    /* Avoid showing the duplicate desktop profile title. */
+    #about .profile-card > h1,
+    #about .profile-card > h2 {
+        display: none;
+    }
+
+    #about .profile-card > .profile-image {
+        order: 4;
+        width: 100%;
+        height: 285px;
+        margin: 0 0 10px;
+        border: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #eaf4ff;
+    }
+
+    #about .profile-image img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: block;
+        object-fit: cover;
+    }
+
+    #about .profile-card > .location {
+        order: 5;
+        width: 100%;
+        min-height: 96px;
+        margin: 0 0 22px;
+        padding: 14px 16px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        background-color: #f3f8ff;
+        border-radius: 12px;
+        color: #64748b;
+        font-size: 13px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    /* Preserve About stats, Journey and What I Do below the reference area. */
+    #about .about-stats {
+        order: 6;
+        width: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    #about .about-stats div {
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    #about .journey {
+        order: 7;
+        width: 100%;
+        padding: 25px 18px;
+        margin: 28px 0 0;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    #about .journey h2 {
+        font-size: 27px;
+    }
+
+    #about .journey-item div {
+        width: calc(100% - 60px);
+    }
+
+    #about .what-i-do {
+        order: 8;
+        width: 100%;
+        margin: 28px 0 0;
+    }
+
+    #about .what-i-do > div:first-child {
+        margin-bottom: 20px;
+    }
+
+    #about .service-card {
+        width: calc(50% - 8px);
+        padding: 18px;
+        margin: 4px;
         box-sizing: border-box;
     }
+}
 
-    .what-i-do > div:first-child {
-        margin: 0 0 18px;
+
+/* ================= VERY SMALL PHONES ================= */
+
+@media (max-width: 420px) {
+
+    #home,
+    #about {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    #home .home-content h1 {
+        font-size: 54px;
+    }
+
+    #home .home-content h2 {
+        font-size: 24px;
+    }
+
+    #home .home-description {
+        font-size: 15px;
+    }
+
+    #home .stat {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    #home .stat h3 {
+        font-size: 24px;
+    }
+
+    #home .stat p {
+        font-size: 11px;
+    }
+
+    #home .code-card {
+        height: 270px;
+    }
+
+    #about .about-content h1 {
+        font-size: 36px;
+    }
+
+    #about .profile-card > .profile-image {
+        height: 250px;
+    }
+
+    #about .social-links a {
+        font-size: 11px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    #about .service-card {
+        width: 100%;
+        margin: 4px 0;
+    }
+}
+
+/* ============================================================
+   FINAL MOBILE REFERENCE — MY JOURNEY + WHAT I DO
+   CSS ONLY
+   Existing HTML/content is preserved.
+   Desktop styles are untouched.
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    /* ========================================================
+       MY JOURNEY
+       ======================================================== */
+
+    #about .journey {
+        order: 7;
+        width: 100%;
+        padding: 0;
+        margin: 38px 0 0;
+        box-sizing: border-box;
+        position: relative;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
         text-align: left;
     }
 
-    .what-i-do h2 {
-        margin: 0 0 8px;
-        font-size: 29px;
-        line-height: 1.15;
+    #about .journey h2 {
+        margin: 0 0 9px;
+        font-size: 38px;
+        line-height: 1.08;
+        font-weight: 800;
         color: #172033;
     }
 
-    .what-i-do > div:first-child p {
-        margin: 0;
-        padding: 0;
+    /* Small blue label above the heading */
+    #about .journey::before {
+        content: "MY JOURNEY";
+        display: block;
+        margin: 0 0 8px;
         font-size: 13px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #2563eb;
+    }
+
+    /* Intro line matching the reference */
+    #about .journey::after {
+        content: "The path that shaped me, built my skills, and brought me to where I am today.";
+        display: block;
+        margin: 0 0 24px;
+        padding-right: 3px;
+        font-size: 15px;
         line-height: 1.55;
         color: #64748b;
     }
 
-    /* Exact 2 x 2 card arrangement from the reference. */
-    .what-i-do .service-card {
+    /*
+       The four existing journey items become a vertical timeline.
+       The left side is reserved for the blue icon circles and line.
+    */
+    #about .journey-item {
+        width: 100%;
+        min-height: 128px;
+        margin: 0 0 10px;
+        padding: 0 0 0 78px;
         position: relative;
-        width: calc(50% - 6px);
-        min-height: 177px;
-        padding: 17px 13px 43px;
-        margin: 0 8px 10px 0;
-        display: inline-block;
-        vertical-align: top;
+        display: block;
         box-sizing: border-box;
-        text-align: left;
-        background: #ffffff;
-        border: 1px solid #dce3eb;
-        border-radius: 10px;
-        box-shadow: none;
+        border: 0;
     }
 
-    .what-i-do .service-card:nth-of-type(even) {
-        margin-right: 0;
+    /* Continuous vertical blue timeline */
+    #about .journey-item::before {
+        content: "";
+        position: absolute;
+        left: 27px;
+        top: 58px;
+        bottom: -10px;
+        width: 4px;
+        background: #1680f5;
+        border-radius: 999px;
     }
 
-    .what-i-do .service-card > span {
-        width: 43px;
-        height: 43px;
-        margin: 0 0 11px;
+    #about .journey-item:last-child::before {
+        display: none;
+    }
+
+    /* Blue circular timeline icon */
+    #about .journey-item > span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 56px;
+        height: 56px;
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
         border-radius: 50%;
-        background: #eaf3ff;
+        background: #167bf0;
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 1;
+        z-index: 2;
+        box-shadow: none;
+    }
+
+    /* White timeline card */
+    #about .journey-item > div {
+        width: 100%;
+        min-height: 128px;
+        margin: 0;
+        padding: 14px 14px 13px;
+        display: block;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 1px solid #d5e6f8;
+        border-radius: 10px;
+        box-shadow: none;
+        text-align: left;
+    }
+
+    #about .journey-item > div p:first-child {
+        margin: 0 0 5px;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: .5px;
+        color: #1478f5;
+    }
+
+    #about .journey-item > div h3 {
+        margin: 0 0 5px;
+        font-size: 17px;
+        line-height: 1.2;
+        font-weight: 800;
+        color: #172033;
+    }
+
+    #about .journey-item > div p:last-child {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.45;
+        color: #6480a6;
+    }
+
+    /* CSS-generated CTA because the current HTML has no CTA element */
+    #about .journey {
+        padding-bottom: 82px;
+    }
+
+    #about .journey .journey-item:last-child {
+        margin-bottom: 0;
+    }
+
+    #about .journey .journey-item:last-child::after {
+        content: "→";
+        position: absolute;
+        right: 14px;
+        bottom: 14px;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #167bf0;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    #about .journey .journey-item:last-child > div::after {
+        content: "Let's Build Something Great\AI'm always open to new opportunities, collaborations and exciting projects.";
+        white-space: pre-line;
+        display: block;
+        margin-top: 12px;
+        padding: 12px 46px 12px 12px;
+        box-sizing: border-box;
+        border-radius: 9px;
+        background: #eaf5ff;
+        color: #2675d6;
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+
+    /* ========================================================
+       WHAT I DO
+       ======================================================== */
+
+    #about .what-i-do {
+        order: 8;
+        width: 100%;
+        margin: 42px 0 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        text-align: left;
+    }
+
+    /* Heading + intro span both columns */
+    #about .what-i-do > div:first-child {
+        grid-column: 1 / -1;
+        width: 100%;
+        margin: 0 0 7px;
+        padding: 0;
+        text-align: left;
+    }
+
+    #about .what-i-do > div:first-child::before {
+        content: "WHAT I DO";
+        display: block;
+        margin: 0 0 8px;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 2px;
         color: #2563eb;
+    }
+
+    #about .what-i-do h2 {
+        margin: 0 0 10px;
+        font-size: 38px;
+        line-height: 1.08;
+        font-weight: 800;
+        color: #172033;
+    }
+
+    #about .what-i-do > div:first-child p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.55;
+        color: #64748b;
+    }
+
+    /* Existing four service cards become a 2 x 2 grid */
+    #about .service-card {
+        width: auto !important;
+        min-width: 0;
+        min-height: 190px;
+        margin: 0 !important;
+        padding: 17px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 1px solid #d5e6f8;
+        border-radius: 10px;
+        box-shadow: none;
+        text-align: left;
+    }
+
+    #about .service-card > span {
+        width: 48px;
+        height: 48px;
+        margin: 0 0 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: #e6f2ff;
+        color: #1478f5;
         font-size: 22px;
         line-height: 1;
     }
 
-    .what-i-do .service-card h3 {
-        margin: 0 0 7px;
-        font-size: 15px;
-        line-height: 1.3;
+    #about .service-card h3 {
+        margin: 0 0 9px;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 800;
         color: #172033;
     }
 
-    .what-i-do .service-card p {
+    #about .service-card p {
         margin: 0;
-        font-size: 11.5px;
-        line-height: 1.48;
-        color: #64748b;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #6480a6;
     }
 
-    /* Small circular arrow, like the reference cards. */
-    .what-i-do .service-card::after {
+    /* Small circular arrow at the bottom of every service card */
+    #about .service-card::after {
         content: "→";
-        position: absolute;
-        left: 13px;
-        bottom: 13px;
-        width: 28px;
-        height: 28px;
+        width: 38px;
+        height: 38px;
+        margin-top: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        background: #eaf3ff;
-        color: #2563eb;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 1;
+        background: #e0efff;
+        color: #1478f5;
+        font-size: 20px;
+        font-weight: 700;
     }
 
-    /* Bottom callout visible in the reference. */
-    .what-i-do::after {
-        content: "🚀  Let's Build Something Great\A\A I'm always open to new opportunities, collaborations and exciting projects.";
-        white-space: pre-wrap;
+    /* CTA matching the reference, generated without changing HTML */
+    #about .what-i-do::after {
+        content: "🚀  Let's Build Something Great\A     I'm always open to new opportunities, collaborations and exciting projects.                                      →";
+        white-space: pre-line;
+        grid-column: 1 / -1;
         width: 100%;
-        min-height: 105px;
-        margin-top: 5px;
-        padding: 18px 18px;
-        display: block;
+        min-height: 108px;
+        margin-top: 0;
+        padding: 20px 55px 18px 18px;
+        display: flex;
+        align-items: center;
         box-sizing: border-box;
         border-radius: 10px;
-        background: #edf6ff;
-        color: #64748b;
-        font-size: 12px;
-        line-height: 1.5;
+        background: #eaf5ff;
+        color: #1675e5;
+        font-size: 13px;
+        line-height: 1.55;
+        font-weight: 600;
+        position: relative;
     }
 }
 
 
-/* ================= 375px REFERENCE TUNING ================= */
+/* ============================================================
+   SMALL PHONES
+   ============================================================ */
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
 
-    .journey h2,
-    .what-i-do h2 {
-        font-size: 28px;
+    #about .journey h2,
+    #about .what-i-do h2 {
+        font-size: 35px;
     }
 
-    .journey-item {
-        grid-template-columns: 48px minmax(0, 1fr);
-        column-gap: 9px;
-        min-height: 123px;
+    #about .journey-item {
+        padding-left: 70px;
     }
 
-    .journey-item > span {
-        width: 48px;
-        height: 48px;
+    #about .journey-item::before {
+        left: 24px;
+    }
+
+    #about .journey-item > span {
+        width: 50px;
+        height: 50px;
         font-size: 20px;
     }
 
-    .journey-item:not(:last-child)::before {
-        left: 23px;
-        top: 48px;
+    #about .journey-item > div {
+        min-height: 124px;
+        padding: 13px 12px;
     }
 
-    .journey-item div {
-        padding: 12px;
+    #about .journey-item > div h3 {
+        font-size: 16px;
     }
 
-    .journey-item h3 {
+    #about .journey-item > div p:last-child {
+        font-size: 12px;
+    }
+
+    #about .service-card {
+        min-height: 180px;
+        padding: 15px 13px;
+    }
+
+    #about .service-card > span {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 11px;
+    }
+
+    #about .service-card h3 {
         font-size: 15px;
     }
 
-    .journey-item div > p:last-child {
-        font-size: 11.5px;
-    }
-
-    .what-i-do .service-card {
-        width: calc(50% - 5px);
-        min-height: 174px;
-        margin-right: 7px;
-        padding: 15px 11px 42px;
-    }
-
-    .what-i-do .service-card:nth-of-type(even) {
-        margin-right: 0;
-    }
-
-    .what-i-do .service-card > span {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .what-i-do .service-card h3 {
-        font-size: 14px;
-    }
-
-    .what-i-do .service-card p {
+    #about .service-card p {
         font-size: 11px;
     }
-}
-
-/* =========================================================
-   FINAL FIX — WHAT I DO TRUE 2-COLUMN GRID
-   This overrides the older mobile .service-card width rules.
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    .what-i-do {
-        width: 100% !important;
-        display: grid !important;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-        column-gap: 10px !important;
-        row-gap: 10px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    .what-i-do > div:first-child {
-        grid-column: 1 / -1 !important;
-        width: 100% !important;
-        margin: 0 0 8px !important;
-        box-sizing: border-box !important;
-    }
-
-    .what-i-do > .service-card {
-        width: auto !important;
-        min-width: 0 !important;
-        max-width: none !important;
-        margin: 0 !important;
-        display: block !important;
-        box-sizing: border-box !important;
-    }
-
-    .what-i-do > .service-card:nth-of-type(even),
-    .what-i-do > .service-card:nth-of-type(odd) {
-        margin: 0 !important;
-    }
-
-    /* Keep the final callout below both columns. */
-    .what-i-do::after {
-        grid-column: 1 / -1 !important;
-        width: 100% !important;
-        margin: 2px 0 0 !important;
-        box-sizing: border-box !important;
-    }
-}
-
-@media (max-width: 380px) {
-    .what-i-do {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-        column-gap: 8px !important;
-        row-gap: 8px !important;
-    }
-
-    .what-i-do > .service-card {
-        min-height: 174px !important;
-        padding: 15px 11px 42px !important;
-    }
-}
-
-
-
-/* =====================================================
-   MOBILE CHATGPT-STYLE SIDEBAR NAVIGATION
-   ===================================================== */
-
-
-/* Hide mobile navigation on desktop */
-#menu-toggle,
-.hamburger,
-.mobile-sidebar,
-.menu-overlay {
-    display: none;
-}
-
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media (max-width: 768px) {
-
-    /* ---------------------------------------------
-       Keep the normal navbar visible
-       --------------------------------------------- */
-
-    .nav-bar {
-        position: relative;
-        z-index: 1000;
-    }
-
-
-    /* Hide desktop navigation */
-    .desktop-nav,
-    .nav-bar > .connect-btn {
-        display: none;
-    }
-
-
-    /* ---------------------------------------------
-       Hamburger
-       --------------------------------------------- */
-
-    #menu-toggle {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-
-        position: fixed;
-        top: 18px;
-        left: 18px;
-
-        width: 42px;
-        height: 42px;
-
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        gap: 5px;
-
-        cursor: pointer;
-
-        z-index: 2002;
-
-        background: rgba(255, 255, 255, 0.92);
-
-        border: 1px solid rgba(30, 60, 100, 0.12);
-
-        border-radius: 12px;
-
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-
-        transition: 0.25s ease;
-    }
-
-
-    .hamburger span {
-        display: block;
-
-        width: 20px;
-        height: 2px;
-
-        background: #14213d;
-
-        border-radius: 10px;
-
-        transition: 0.3s ease;
-    }
-
-
-    /* ---------------------------------------------
-       Sidebar
-       --------------------------------------------- */
-
-    .mobile-sidebar {
-
-        display: flex;
-
-        position: fixed;
-
-        top: 0;
-        left: 0;
-
-        width: min(82vw, 330px);
-        height: 100vh;
-
-        background: #ffffff;
-
-        z-index: 2001;
-
-        flex-direction: column;
-
-        padding: 20px;
-
-        box-sizing: border-box;
-
-        transform: translateX(-105%);
-
-        transition: transform 0.3s ease;
-
-        box-shadow: 10px 0 35px rgba(0, 0, 0, 0.12);
-    }
-
-
-    /* Open sidebar */
-
-    #menu-toggle:checked ~ .mobile-sidebar {
-        transform: translateX(0);
-    }
-
-
-    /* ---------------------------------------------
-       Sidebar header
-       --------------------------------------------- */
-
-    .mobile-sidebar-header {
-
-        display: flex;
-
-        align-items: center;
-        justify-content: space-between;
-
-        padding-bottom: 22px;
-
-        border-bottom: 1px solid #e7edf5;
-    }
-
-
-    .mobile-sidebar-header .logo {
-
-        display: flex;
-
-        align-items: center;
-
-        gap: 8px;
-    }
-
-
-    .mobile-sidebar-header .logo span {
-
-        color: #2563eb;
-
-        font-weight: 700;
-    }
-
-
-    .mobile-sidebar-header .logo p {
-
-        margin: 0;
-
-        color: #14213d;
-
-        font-weight: 800;
-
-        letter-spacing: 1px;
-    }
-
-
-    /* Close X */
-
-    .close-menu {
-
-        display: flex;
-
-        width: 40px;
-        height: 40px;
-
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 10px;
-
-        font-size: 30px;
-
-        line-height: 1;
-
-        color: #14213d;
-
-        cursor: pointer;
-
-        transition: 0.2s ease;
-    }
-
-
-    .close-menu:hover {
-        background: #f1f5f9;
-    }
-
-
-    /* ---------------------------------------------
-       Mobile links
-       --------------------------------------------- */
-
-    .mobile-nav-links {
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 6px;
-
-        margin-top: 25px;
-    }
-
-
-    .mobile-nav-links a {
-
-        display: flex;
-
-        align-items: center;
-
-        gap: 14px;
-
-        width: 100%;
-
-        box-sizing: border-box;
-
-        padding: 14px 15px;
-
-        border-radius: 12px;
-
-        text-decoration: none;
-
-        color: #334155;
-
-        font-size: 16px;
-
-        font-weight: 600;
-
-        transition: 0.2s ease;
-    }
-
-
-    .mobile-nav-links a span {
-
-        width: 25px;
-
-        text-align: center;
-
-        font-size: 18px;
-    }
-
-
-    .mobile-nav-links a:hover {
-
-        background: #f1f5f9;
-
-        color: #2563eb;
-    }
-
-
-    /* ---------------------------------------------
-       Bottom connect button
-       --------------------------------------------- */
-
-    .mobile-sidebar-bottom {
-
-        margin-top: auto;
-
-        padding-top: 20px;
-
-        border-top: 1px solid #e7edf5;
-    }
-
-
-    .mobile-connect-btn {
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        width: 100%;
-
-        padding: 14px;
-
-        box-sizing: border-box;
-
-        border-radius: 12px;
-
-        background: #2563eb;
-
-        color: white;
-
-        text-decoration: none;
-
-        font-weight: 700;
-
-        transition: 0.2s ease;
-    }
-
-
-    .mobile-connect-btn:hover {
-        background: #1d4ed8;
-    }
-
-
-    .mobile-sidebar-bottom p {
-
-        text-align: center;
-
-        margin: 18px 0 0;
-
-        color: #94a3b8;
-
-        font-size: 13px;
-    }
-
-
-    /* ---------------------------------------------
-       Dark overlay
-       --------------------------------------------- */
-
-    .menu-overlay {
-
-        display: block;
-
-        position: fixed;
-
-        inset: 0;
-
-        background: rgba(15, 23, 42, 0.55);
-
-        z-index: 2000;
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transition: 0.3s ease;
-
-        cursor: pointer;
-    }
-
-
-    #menu-toggle:checked ~ .menu-overlay {
-
-        opacity: 1;
-
-        visibility: visible;
-    }
-
-
-    /* ---------------------------------------------
-       Hamburger animation → X
-       --------------------------------------------- */
-
-    #menu-toggle:checked + .hamburger span:nth-child(1) {
-
-        transform: translateY(7px) rotate(45deg);
-    }
-
-
-    #menu-toggle:checked + .hamburger span:nth-child(2) {
-
-        opacity: 0;
-    }
-
-
-    #menu-toggle:checked + .hamburger span:nth-child(3) {
-
-        transform: translateY(-7px) rotate(-45deg);
-    }
-
 }
